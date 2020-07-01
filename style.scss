@@ -1,0 +1,161 @@
+@import url("https://fonts.googleapis.com/css2?family=PT+Serif:wght@400;700&family=Poppins:wght@400;600&display=swap");
+
+figure {
+    margin: 0;
+}
+
+.page-container {
+    margin: 100px 240px;
+}
+
+.page-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 100px;
+
+    &__heading {
+        font-family: PT Serif;
+
+        font-weight: bold;
+        font-size: 36px;
+        line-height: 48px;
+        letter-spacing: -0.045em;
+    }
+
+    &__subHeading {
+        font-family: "Poppins", sans-serif;
+        width: 30%;
+        justify-content: flex-end;
+        padding-right: 250px;
+
+        &--1 {
+            font-weight: 600;
+            font-size: 18px;
+            line-height: 27px;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+        }
+
+        &--2 {
+            font-size: 18px;
+            line-height: 27px;
+        }
+    }
+}
+
+.page-mainContent {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.teamMember-card {
+    position: relative;
+    width: 25%;
+    cursor: pointer;
+
+    &:hover &__image {
+        transform: scale(1.05);
+        filter: grayscale(0);
+    }
+
+    &:hover &__name {
+        color: orangered;
+    }
+
+    &__shape {
+        overflow: hidden;
+    }
+
+    &__image {
+        width: 100%;
+        transition: all 0.5s;
+        filter: grayscale(1);
+    }
+
+    &__name {
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 27px;
+        margin-top: 15px;
+    }
+
+    &__jobTitle {
+        font-family: PT Serif;
+        font-size: 12px;
+        display: inline;
+        text-transform: uppercase;
+        -webkit-writing-mode: vertical-rl;
+        -ms-writing-mode: tb-rl;
+        writing-mode: vertical-rl;
+        text-orientation: mixed;
+        position: absolute;
+        top: 0;
+        right: -35px;
+    }
+
+    &:not(:nth-of-type(3n + 3)) {
+        margin-right: 100px;
+    }
+
+    &:nth-of-type(3n + 2) {
+        margin-top: 150px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .page-container {
+        margin: 0 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .page-container {
+        margin: 17px 10px;
+        overflow-x: hidden;
+    }
+
+    .page-header {
+        flex-direction: column;
+        margin-bottom: 50px;
+
+        &__heading {
+            margin-bottom: 38px;
+        }
+
+        &__subHeading {
+            width: 100%;
+            padding-right: 0;
+        }
+    }
+
+    .teamMember-card {
+        width: 40%;
+        margin-bottom: 20px;
+
+        &__jobTitle {
+            right: -30px;
+        }
+
+        &:not(:nth-of-type(3n + 3)) {
+            margin-right: 0 !important;
+        }
+
+        &:nth-of-type(3n + 3) {
+            margin-top: initial !important;
+            margin-right: 0 !important;
+        }
+
+        &:nth-of-type(3n + 2) {
+            margin-top: 0 !important;
+        }
+
+        &:nth-of-type(odd) {
+            margin-right: 45px !important;
+        }
+
+        &:nth-of-type(even) {
+            margin-top: 50px !important;
+        }
+    }
+}

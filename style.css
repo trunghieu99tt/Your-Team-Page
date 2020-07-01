@@ -1,0 +1,166 @@
+@import url("https://fonts.googleapis.com/css2?family=PT+Serif:wght@400;700&family=Poppins:wght@400;600&display=swap");
+figure {
+  margin: 0;
+}
+
+.page-container {
+  margin: 100px 240px;
+}
+
+.page-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 100px;
+}
+
+.page-header__heading {
+  font-family: PT Serif;
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 48px;
+  letter-spacing: -0.045em;
+}
+
+.page-header__subHeading {
+  font-family: "Poppins", sans-serif;
+  width: 30%;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  padding-right: 250px;
+}
+
+.page-header__subHeading--1 {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 27px;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.page-header__subHeading--2 {
+  font-size: 18px;
+  line-height: 27px;
+}
+
+.page-mainContent {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.teamMember-card {
+  position: relative;
+  width: 25%;
+  cursor: pointer;
+}
+
+.teamMember-card:hover .teamMember-card__image {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+  -webkit-filter: grayscale(0);
+          filter: grayscale(0);
+}
+
+.teamMember-card:hover .teamMember-card__name {
+  color: orangered;
+}
+
+.teamMember-card__shape {
+  overflow: hidden;
+}
+
+.teamMember-card__image {
+  width: 100%;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  -webkit-filter: grayscale(1);
+          filter: grayscale(1);
+}
+
+.teamMember-card__name {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 27px;
+  margin-top: 15px;
+}
+
+.teamMember-card__jobTitle {
+  font-family: PT Serif;
+  font-size: 12px;
+  display: inline;
+  text-transform: uppercase;
+  -webkit-writing-mode: vertical-rl;
+  -ms-writing-mode: tb-rl;
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  position: absolute;
+  top: 0;
+  right: -35px;
+}
+
+.teamMember-card:not(:nth-of-type(3n + 3)) {
+  margin-right: 100px;
+}
+
+.teamMember-card:nth-of-type(3n + 2) {
+  margin-top: 150px;
+}
+
+@media (max-width: 1024px) {
+  .page-container {
+    margin: 0 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .page-container {
+    margin: 17px 10px;
+    overflow-x: hidden;
+  }
+  .page-header {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-bottom: 50px;
+  }
+  .page-header__heading {
+    margin-bottom: 38px;
+  }
+  .page-header__subHeading {
+    width: 100%;
+    padding-right: 0;
+  }
+  .teamMember-card {
+    width: 40%;
+    margin-bottom: 20px;
+  }
+  .teamMember-card__jobTitle {
+    right: -30px;
+  }
+  .teamMember-card:not(:nth-of-type(3n + 3)) {
+    margin-right: 0 !important;
+  }
+  .teamMember-card:nth-of-type(3n + 3) {
+    margin-top: initial !important;
+    margin-right: 0 !important;
+  }
+  .teamMember-card:nth-of-type(3n + 2) {
+    margin-top: 0 !important;
+  }
+  .teamMember-card:nth-of-type(odd) {
+    margin-right: 45px !important;
+  }
+  .teamMember-card:nth-of-type(even) {
+    margin-top: 50px !important;
+  }
+}
